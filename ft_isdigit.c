@@ -6,13 +6,13 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 14:51:07 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/05 15:23:36 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/06 16:49:59 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	isdigit( int c)
+int	ft_isdigit( int c)
 {
 	if (c >= 48 && c <= 57)
 		return (1);

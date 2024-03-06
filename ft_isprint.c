@@ -6,13 +6,13 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 15:14:41 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/05 15:22:28 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/06 16:50:51 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	isprint( int c)
+int	ft_isprint( int c)
 {
 	if (c >= 32 && c <= 126)
 		return (1);

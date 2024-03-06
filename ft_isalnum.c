@@ -6,12 +6,12 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 14:56:49 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/05 15:10:25 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/06 16:50:23 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
 
-int	isalnum(int c)
+int	ft_isalnum(int c)
 {
 	if (c >= 48 && c <= 122)
 		return (1);

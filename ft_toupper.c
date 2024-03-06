@@ -1,30 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/05 15:57:37 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/06 12:17:50 by bmilford         ###   ########.fr       */
+/*   Created: 2024/03/06 14:12:49 by bmilford          #+#    #+#             */
+/*   Updated: 2024/03/06 14:24:15 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <string.h>
+#include <libft.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+int	toupper(int c)
 {
-	int	index;
-	int	end;
-
-	index = 0;
-	end = 0;
-	while (src[index] != '\0' index <= n)
-	{
-		dst[end] = src[index];
-		index++;
-		end++;
-	}
-	return (dst);
+	if (c > 96 && c < 123)
+		c = c - 32;
+	return (c);
 }

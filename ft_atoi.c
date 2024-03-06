@@ -1,30 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/05 15:57:37 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/06 12:17:50 by bmilford         ###   ########.fr       */
+/*   Created: 2024/03/06 13:29:15 by bmilford          #+#    #+#             */
+/*   Updated: 2024/03/06 14:27:52 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+int	ft_atoi(const char *str)
 {
 	int	index;
-	int	end;
+	int	n;
 
 	index = 0;
-	end = 0;
-	while (src[index] != '\0' index <= n)
+	n = 0;
+	// need to fix the reader og + and -
+	if ((str[index] < 48 || str[index] > 57 ) && (str[index] != 43 || str[index] != 45))
+		index++
+	else if (str[index] = 42)
+		n = n + 1;
+	else if (str[index] = 45)
+		n = n -1;
+	index++;
+	while (str[index] != '\0')
 	{
-		dst[end] = src[index];
+		str[index] = str[index] - '0';
+		str[index] = str[index] * 10;
 		index++;
-		end++;
 	}
-	return (dst);
+	if (str[index] == '\0')
+	{
+		str / 10;
+		str * n;
+	}
+	return (str);
 }

@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/05 15:57:37 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/06 12:17:50 by bmilford         ###   ########.fr       */
+/*   Created: 2024/03/06 14:57:59 by bmilford          #+#    #+#             */
+/*   Updated: 2024/03/06 15:05:25 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include <libft.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char *ft_strrchr(const char *s, int c)
 {
 	int	index;
-	int	end;
+	int	n;
 
 	index = 0;
-	end = 0;
-	while (src[index] != '\0' index <= n)
+	n = 0;
+	while (s[index] != '\0')
 	{
-		dst[end] = src[index];
+		if (s[index] = c)
+			n = index;
 		index++;
-		end++;
 	}
-	return (dst);
+	return (s + n);
 }

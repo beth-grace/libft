@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/05 15:57:37 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/06 12:17:50 by bmilford         ###   ########.fr       */
+/*   Created: 2024/03/05 16:32:09 by bmilford          #+#    #+#             */
+/*   Updated: 2024/03/06 13:24:26 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void *ft_memset(void *b, int c, size_t len)
 {
 	int	index;
-	int	end;
 
 	index = 0;
-	end = 0;
-	while (src[index] != '\0' index <= n)
+	bstill = (unsigned char*)b; 
+	while (bstill[index] <= len && bstill[index] != '\0')
 	{
-		dst[end] = src[index];
+		bstill[index] = c;
 		index++;
-		end++;
 	}
-	return (dst);
+	return bstill;
 }

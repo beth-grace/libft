@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 15:57:37 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/06 12:17:50 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/07 15:18:04 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,17 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	int	index;
-	int	end;
+	int				index;
+	unsigned char	*s;
+	unsigned char	*d;
 
 	index = 0;
-	end = 0;
+	s = (unsigned char *)src;
+	d = (unsigned char *)dst;
 	while (src[index] != '\0' index <= n)
 	{
-		dst[end] = src[index];
+		dst[index] = src[index];
 		index++;
-		end++;
 	}
 	return (dst);
 }

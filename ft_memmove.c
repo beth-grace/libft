@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 12:18:12 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/06 14:24:58 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/08 14:52:39 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ void	*memmove(void *dst, const void *src, size_t len)
 
 	index = 0;
 	end = 0;
-	whil_se
+	while
 } 

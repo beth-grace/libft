@@ -1,37 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/07 12:17:15 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/08 14:45:57 by bmilford         ###   ########.fr       */
+/*   Created: 2024/03/08 15:09:15 by bmilford          #+#    #+#             */
+/*   Updated: 2024/03/08 15:54:44 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
-#include <stdlib.h>
+#include "libft.h"
 
-char	*ft_strdup(char *src)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	int		index;
 	int		size;
-	char	*dest;
-
-	size = 0;
+	char	*sub;
+	
 	index = 0;
-	while (src[index] != '\0')
-		index++;
-	dest = malloc((index + 1) * sizeof(char));
-	if (!(dest))
-		return (NULL);
-	index = 0;
-	while (src[index] != '\0')
+	while (s[index] != '\0' && s[index] <= len)
 	{
-		dest[index] = src[index];
-		index--;
+		while (s[index] != start)
+			index++;
+		while(s[index] <= len)
+		{
+			index++
+			size++;
+		}
+		sub = malloc((size + 1) * sizeof(char));
+		index = index - size;
+		while (s[index] <= len)
+		{
+			sub[index] = s[index];
+			index++;
+		}
+		sub[index] = '\0'; 
+		return (sub);
 	}
-	dest[index] = '\0';
-	return (dest);
+	return (NULL);
 }

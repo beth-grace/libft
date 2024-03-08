@@ -1,37 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/07 12:17:15 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/08 14:45:57 by bmilford         ###   ########.fr       */
+/*   Created: 2024/03/08 16:22:59 by bmilford          #+#    #+#             */
+/*   Updated: 2024/03/08 16:24:32 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
-#include <stdlib.h>
+#include "libft.h"
 
-char	*ft_strdup(char *src)
+char	*ft_itoa(int n);
 {
-	int		index;
-	int		size;
-	char	*dest;
-
-	size = 0;
-	index = 0;
-	while (src[index] != '\0')
-		index++;
-	dest = malloc((index + 1) * sizeof(char));
-	if (!(dest))
-		return (NULL);
-	index = 0;
-	while (src[index] != '\0')
-	{
-		dest[index] = src[index];
-		index--;
-	}
-	dest[index] = '\0';
-	return (dest);
 }

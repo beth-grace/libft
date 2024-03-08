@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/07 12:17:15 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/08 14:45:57 by bmilford         ###   ########.fr       */
+/*   Created: 2024/03/07 16:00:02 by bmilford          #+#    #+#             */
+/*   Updated: 2024/03/08 14:47:13 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
-#include <stdlib.h>
 
-char	*ft_strdup(char *src)
+size_t	ft_strlcpy(char *dst, const char *src, size_t destsize)
 {
-	int		index;
-	int		size;
-	char	*dest;
+	int	index;
 
-	size = 0;
 	index = 0;
-	while (src[index] != '\0')
-		index++;
-	dest = malloc((index + 1) * sizeof(char));
-	if (!(dest))
-		return (NULL);
-	index = 0;
-	while (src[index] != '\0')
+	while (src[index] != '\0' && index < destsize)
 	{
-		dest[index] = src[index];
-		index--;
+		src[index] = dest[index];
+		index++;
 	}
-	dest[index] = '\0';
-	return (dest);
-}
+	if (src[index] <= destsize)
+	{
+		dst[index] = '\0';
+		index++;
+	}
+	return (ft_strlen(src));

@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/07 12:17:15 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/08 14:45:57 by bmilford         ###   ########.fr       */
+/*   Created: 2024/03/08 12:13:58 by bmilford          #+#    #+#             */
+/*   Updated: 2024/03/08 15:17:44 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
-#include <stdlib.h>
 
-char	*ft_strdup(char *src)
+void	ft_putendl_fd(char *s, int fd)
 {
-	int		index;
-	int		size;
-	char	*dest;
+	int	index;
 
-	size = 0;
 	index = 0;
-	while (src[index] != '\0')
-		index++;
-	dest = malloc((index + 1) * sizeof(char));
-	if (!(dest))
-		return (NULL);
-	index = 0;
-	while (src[index] != '\0')
+	while (s[index] != '\0')
 	{
-		dest[index] = src[index];
-		index--;
+		ft_putchar_fd(s[index],fd);
+		index++
 	}
-	dest[index] = '\0';
-	return (dest);
+	write(fd,"\n" , (index + 1));
+	return (0);
 }

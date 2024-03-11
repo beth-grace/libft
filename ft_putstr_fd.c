@@ -6,11 +6,11 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 12:05:31 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/08 12:29:40 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/11 15:53:30 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {
@@ -18,10 +18,6 @@ void	ft_putstr_fd(char *s, int fd)
 
 	index = 0;
 	while (s[index] != '\0')
-	{
-		fd[index] = s[index];
 		index++;
-	}
-	write(1, fd, index);
-	return (0);
+	write(fd, s, index);
 }

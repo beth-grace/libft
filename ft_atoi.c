@@ -6,11 +6,11 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 13:29:15 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/08 14:51:49 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/11 17:46:02 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

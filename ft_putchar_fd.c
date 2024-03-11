@@ -6,13 +6,13 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 11:59:11 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/08 15:18:43 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/11 17:27:10 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write(fd, c, 1);
+	write(fd, &c, 1);
 }

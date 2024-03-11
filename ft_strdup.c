@@ -6,14 +6,13 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 12:17:15 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/08 14:45:57 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/11 17:30:46 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
-#include <stdlib.h>
+#include "libft.h"
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *s1)
 {
 	int		index;
 	int		size;
@@ -21,16 +20,16 @@ char	*ft_strdup(char *src)
 
 	size = 0;
 	index = 0;
-	while (src[index] != '\0')
+	while (s1[index] != '\0')
 		index++;
-	dest = malloc((index + 1) * sizeof(char));
+	dest = (char *)malloc((index + 1) * sizeof(char));
 	if (!(dest))
 		return (NULL);
 	index = 0;
-	while (src[index] != '\0')
+	while (s1[index] != '\0')
 	{
-		dest[index] = src[index];
-		index--;
+		dest[index] = s1[index];
+		index++;
 	}
 	dest[index] = '\0';
 	return (dest);

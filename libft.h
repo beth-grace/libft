@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 15:06:41 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/07 15:55:35 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/11 18:05:19 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <limits.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

@@ -6,11 +6,11 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 14:51:07 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/06 16:49:59 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/11 17:54:14 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isdigit( int c)
 {

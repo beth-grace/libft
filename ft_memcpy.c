@@ -6,12 +6,11 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 15:57:37 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/07 15:18:04 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/11 17:54:48 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

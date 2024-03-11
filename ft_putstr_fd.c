@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 12:05:31 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/11 15:53:30 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/11 17:43:59 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	int	index;
 
+	if (!s)
+		return ;
 	index = 0;
 	while (s[index] != '\0')
 		index++;

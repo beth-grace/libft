@@ -14,4 +14,15 @@
 
 char	*ft_itoa(int n);
 {
+	int	index;
+	int	size;
+	char	*str;
+
+	if (n < 1)
+		size++;
+	while(n < 10)
+		size++;
+	str = malloc(size + 1) * sizeof(char);
+
+
 }

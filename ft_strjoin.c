@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 15:55:05 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/08 16:19:34 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/12 15:03:00 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	while (s2[index2] != '\0')
 	{
 		join[index1 + index2] = s2[index2];
-		index2++
+		index2++;
 	}
 	join[index1 + index2] = NULL;
 	return (join);

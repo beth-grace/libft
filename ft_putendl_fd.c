@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 12:13:58 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/11 17:45:03 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/12 14:59:40 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ void	ft_putendl_fd(char *s, int fd)
 		return ;
 	while (s[index] != '\0')
 	{
-		ft_putchar_fd(s[index],fd);
+		ft_putchar_fd(s[index], fd);
 		index++;
 	}
-	write(fd,"\n" , (index + 1));
+	write(fd, "\n", (index + 1));
 	return (0);
 }

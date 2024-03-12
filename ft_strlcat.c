@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmilford <bmilford@student.42adel.o>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/12 11:52:25 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/12 14:53:55 by bmilford         ###   ########.fr       */
+/*   Created: 2024/03/12 13:50:01 by bmilford          #+#    #+#             */
+/*   Updated: 2024/03/12 14:24:03 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 {
-	int				index;
-	unsigned char	*out;
+	unsigned int	index;
+	unsigned int	end;
 
 	index = 0;
-	out = (unsigned char *)s;
-	while (index < n)
-	{
-		if (out[index] == c)
-			return (out + index);
+	end = 0;
+	while (dest[index] != '\0')
 		index++;
+	while (src[end] != '\0' && end < dstsize)
+	{
+		dest[index] = src[end];
+		index++;
+		end++;
 	}
-	if (c == '\0' && out[index] == c)
-		return (out + index);
-	return (NULL);
+	if (src[end] == '\0' || end == dstsize)
+		dest[index] = '\0';
+	return (dest);
 }

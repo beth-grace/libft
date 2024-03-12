@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 14:36:36 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/12 12:21:01 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/12 15:00:35 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ char	*ft_strchr(const char *s, int c)
 	index = 0;
 	while (s[index] != '\0')
 	{
-		if (s[index] = c)
+		if (s[index] == c)
 			return (s + index);
 		index++;
 	}
-	if (c == '\0' && s[index] = c)
+	if (c == '\0' && s[index] == c)
 		return (s + index);
 	return (NULL);
 }

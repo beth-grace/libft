@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 16:32:09 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/11 17:56:01 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/12 14:49:10 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	unsigned char	*bstill;
 
 	index = 0;
-	bstill = (unsigned char *) b;
+	bstill = (unsigned char *)b;
 	while (bstill[index] <= len && bstill[index] != '\0')
 	{
 		bstill[index] = c;

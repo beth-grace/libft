@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
+/*   By: bmilford <bmilford@student.42adel.o>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 14:57:59 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/12 15:41:27 by bmilford         ###   ########.fr       */
+/*   Created: 2024/03/12 15:59:37 by bmilford          #+#    #+#             */
+/*   Updated: 2024/03/12 16:27:03 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strtrim(char const *s1, char const *s2)
 {
 	int	index;
-	int	n;
 
 	index = 0;
-	n = 0;
-	while (s[index] != '\0')
-	{
-		if (s[index] == c)
-			n = index;
-		index++;
-	}
-	return (s + n);
-}
+
+

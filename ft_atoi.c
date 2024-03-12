@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 13:29:15 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/12 14:51:20 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/12 15:54:43 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_atoi(const char *str)
 	n = 0;
 	ten = 10;
 	if (str[index] < 33)
-		index++
+		index++;
 	else if (str[index] == 42)
 		n = n + 1;
 	else if (str[index] == 45)

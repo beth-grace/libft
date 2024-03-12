@@ -6,12 +6,13 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 12:18:12 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/12 14:58:29 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/12 15:53:41 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-void	*memmove(void *dst, const void *src, size_t len)
+
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	int				index;
 	unsigned char	*d;

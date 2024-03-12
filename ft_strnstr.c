@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 19:18:04 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/12 15:33:02 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/12 15:40:30 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	int		indexh;
 	int		indexn;
 	int		size;
-	char	*ptr
+	char	*ptr;
 
 	indexh = 0;
 	indexn = 0;
@@ -32,12 +32,13 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		if (needle[indexn] == 0)
 			return (haystack);
 		if (haystack[indxh] == needle[indexn])
-		{	
+		{
 			indexh++;
 			indexn++;
 			ptr = indexh;
 		}
-		while (haystack[indexh] == needle[indexn] && haystack[indexh - 1] == needle[indexn - 1])
+		while (haystack[indexh] == needle[indexn]
+			&& haystack[indexh - 1] == needle[indexn - 1])
 		{
 			indexh++;
 			indexn++;

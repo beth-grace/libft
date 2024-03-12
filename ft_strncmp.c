@@ -6,9 +6,11 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 16:15:48 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/06 16:57:08 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/12 12:32:30 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
@@ -24,7 +26,7 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 		else
 			index++;
 	}
-	while ((s1[index] == '\0' || s2[index] '\0') && index < n)
+	while ((s1[index] == '\0' || s2[index] == '\0') && index < n)
 	{
 		if (s1[index] == '\0' && s2[index] == '\0')
 			return (0);

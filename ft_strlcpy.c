@@ -6,11 +6,11 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 16:00:02 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/08 14:47:13 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/12 11:46:37 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t destsize)
 {

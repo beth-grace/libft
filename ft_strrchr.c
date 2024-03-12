@@ -6,11 +6,11 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 14:57:59 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/06 15:05:25 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/12 12:13:22 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char *ft_strrchr(const char *s, int c)
 {

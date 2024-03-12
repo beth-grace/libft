@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 16:22:59 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/11 18:11:45 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/12 11:11:42 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,6 @@
 static int	count(int n)
 {
 	int	index;
-<<<<<<< HEAD
-	int	size;
-	char	*str;
-
-	if (n < 1)
-		size++;
-	while(n < 10)
-		size++;
-	str = malloc(size + 1) * sizeof(char);
-
-
-=======
 
 	index = 0;
 	if (n < 0)
@@ -40,7 +28,6 @@ static int	count(int n)
 		c /= 10;
 		index++;
 	}
->>>>>>> e4d15396b80046590d143a67146b06d08fa22447
 }
 
 char	*ft_itoa(int n)

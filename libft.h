@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 15:06:41 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/11 18:05:19 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/12 11:23:32 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
-int		ft_isalnum(int c);
+int		ft_isascii(int c);
 int		ft_isprint(int c);
 
 size_t	ft_strlen(const char *s);

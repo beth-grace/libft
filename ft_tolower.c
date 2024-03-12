@@ -6,11 +6,11 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 14:28:50 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/06 14:30:30 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/12 11:47:20 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_tolower(int c)
 {

@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 19:18:30 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/11 19:18:33 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/12 11:46:42 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strmapi(char const *s,char (*f)(unsigned int, char))
 		index++;
 	if (index < 1)
 		return (NULL);
-	fin = malloc((index + 1) * sizeof (char))
+	fin =(char *)malloc((index + 1) * sizeof(char));
 	index = 0;
 	while (s[index] != '\0')
 	{

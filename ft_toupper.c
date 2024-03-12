@@ -6,12 +6,11 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 14:12:49 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/06 14:24:15 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/12 11:47:22 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <libft.h>
+#include "libft.h"
 
 int	toupper(int c)
 {

@@ -6,44 +6,44 @@
 /*   By: bmilford <bmilford@student.42adel.o>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 15:59:37 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/14 00:26:27 by beefie           ###   ########.fr       */
+/*   Updated: 2024/03/14 12:16:00 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	 loop(char c,char *str)
+static int	 loop(char c,char *set)
 {
 	int	index;
 
 	index = 0;
-	while (str[index] == c)
+	while (set[index] != '\0')
+		if (s[index] == c)
+			return (1);
 		index++;
-	return (index);
+	return (0);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		index;
 	int		out;
 	int		start;
 	int		end;
-	int		s;
 	char	*dest;
 
-	start = loop(set, s1); 
+	while (loop(s1, set))
+		start++;
 	end = ft_strlen(s1);
 	dest = (char *)malloc((end - start + 1) * sizeof(char));
-	index = 0;
-	while (s1[index] == set)
-		index++;
-	end--;
-	while (s1[end] == set)
+	if (!dest)
+		return (NULL);
+	out = 0;
+	while (loop(s1, set))
 		end--;
-	while (s1[index] != '\0')
+	while (s1[start] != '\0')
 	{
-		dest[out] = s1[index];
-		index++;
+		dest[out] = s1[start];
+		start++;
 		out++;
 	}
 	dest[out] == '\0';

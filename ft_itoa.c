@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 16:22:59 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/13 15:17:30 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/14 17:34:32 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 static int	count(int n)
 {
 	int	index;
+	int	c;
 
 	index = 0;
 	if (n < 0)
@@ -28,6 +29,7 @@ static int	count(int n)
 		c /= 10;
 		index++;
 	}
+	return (index);
 }
 
 char	*ft_itoa(int n)

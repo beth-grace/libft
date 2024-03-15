@@ -44,7 +44,7 @@ $(NAME) : $(OBJ)
 	ar -r $(NAME) $(OBJ)
 
 $(OBJ): $(SRC)
-	cc $(FLAGS) $(SRC)
+	cc $(CFLAGS) $(SRC)
 
 clean :
 	rm -f $(OBJ)

@@ -6,13 +6,13 @@
 /*   By: bmilford <bmilford@student.42adel.o>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 14:24:03 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/13 16:45:31 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/14 17:46:21 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	count(char *s, c)
+static char	count(const char *s, char c)
 {
 	int	index;
 	int	size;
@@ -21,7 +21,7 @@ static char	count(char *s, c)
 	size = 0;
 	while (s[index] != '\0')
 	{
-		if(s[index] == c)
+		if (s[index] == c)
 		{
 			while (s[index] == c)
 				index++;
@@ -34,7 +34,6 @@ static char	count(char *s, c)
 }
 
 char	**ft_split(char const *s, char c)
-
 {
 	int		index;
 	char	**dest;
@@ -44,7 +43,7 @@ char	**ft_split(char const *s, char c)
 	index = 0;
 	size = 0;
 	string = 0;
-	*dest = (char *)malloc((count(s,c) + 1) * sizeof(char));
+	dest = (char **)malloc((count(s, c) + 1) * sizeof(char *));
 	while (s[index] != '\0')
 	{
 		if (s[index] != c)
@@ -55,8 +54,7 @@ char	**ft_split(char const *s, char c)
 				index++;
 				size++;
 			}
-			dest[string] = ft_substr(s, index - size, size);
-			string++;
+			dest[string++] = ft_substr(s, index - size, size);
 		}
 		else
 			index++;

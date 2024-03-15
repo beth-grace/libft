@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 15:40:23 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/12 16:18:56 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/14 17:44:07 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	int				index;
-	unsigned char	*ptr;
+	size_t				index;
+	unsigned char		*ptr;
 
 	index = 0;
 	ptr = (unsigned char *)s;
@@ -27,5 +27,4 @@ void	ft_bzero(void *s, size_t n)
 			index++;
 		}
 	}
-	return (ptr);
 }

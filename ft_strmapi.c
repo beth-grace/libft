@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 19:18:30 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/12 15:03:54 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/14 17:30:04 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int		index1;
+	int		index;
 	char	*fin;
 
-	index1 = 0;
+	index = 0;
 	while (s[index] != '\0')
 		index++;
 	if (index < 1)
@@ -26,9 +26,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	index = 0;
 	while (s[index] != '\0')
 	{
-		fin[index] = (*f)(index, &s[index]);
+		fin[index] = (*f)(index, s[index]);
 		index++;
 	}
-	index = '\0';
+	fin[index] = '\0';
 	return (fin);
 }

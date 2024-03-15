@@ -6,15 +6,15 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 16:15:48 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/12 14:18:11 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/14 17:41:28 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unisgned int	index;
+	size_t	index;
 
 	index = 0;
 	while (s1[index] != '\0' && s2[index] != '\0' && index < n)

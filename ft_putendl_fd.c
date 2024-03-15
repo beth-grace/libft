@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 12:13:58 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/12 14:59:40 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/14 17:39:55 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,4 @@ void	ft_putendl_fd(char *s, int fd)
 		index++;
 	}
 	write(fd, "\n", (index + 1));
-	return (0);
 }

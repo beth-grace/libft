@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.o>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 11:52:25 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/12 14:53:55 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/14 17:38:34 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int				index;
+	size_t			index;
 	unsigned char	*out;
 
 	index = 0;

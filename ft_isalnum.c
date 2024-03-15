@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 14:56:49 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/11 17:53:35 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/15 12:42:57 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 int	ft_isalnum(int c)
 {
-	if (c >= 48 && c <= 122)
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')
+		return (1);
+	if (c >= '0' && c <= '9')
 		return (1);
 	else
 		return (0);

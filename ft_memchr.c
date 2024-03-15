@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.o>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 11:52:25 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/14 17:38:34 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/15 14:56:46 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return (out + index);
 		index++;
 	}
-	if (c == '\0' && out[index] == c)
-		return (out + index);
 	return (NULL);
 }

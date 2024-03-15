@@ -6,15 +6,15 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 14:12:49 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/14 17:42:57 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/15 14:48:53 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	toupper(int c)
+int	ft_toupper(int c)
 {
-	if (c > 96 && c < 123)
-		c = c - 32;
+	if (c >= 'a' && c <= 'z')
+		c -= 32;
 	return (c);
 }

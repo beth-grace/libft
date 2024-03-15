@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 15:09:15 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/14 17:57:03 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/15 16:33:28 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,28 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t		index;
+	size_t		count;
+	int			index;
 	char		*sub;
 
 	index = start;
-	sub = (char *)malloc((len + 1) * sizeof(char));
+	count = 0;
+	while (count < len)
+	{
+		start++;
+		count++;
+	}
+	sub = (char *)malloc((count + 1) * sizeof(char));
 	if (!sub)
 		return (NULL);
-	while (s[index] != '\0' && index <= len)
+	start = index;
+	count = 0;
+	while (count < len)
 	{
-		sub[index] = s[index];
-		index++;
+		sub[count] = s[start];
+		start++;
+		count++;
 	}
-	sub[index] = '\0';
+	sub[count] = '\0';
 	return (sub);
 }

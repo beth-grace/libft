@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 14:00:20 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/14 17:32:03 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/15 17:43:35 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*out;
 
-	out = (void *)malloc(size * count);
-	ft_bzero(out, size);
+	out = (void *)malloc(count * size);
+	if (!out)
+		return (NULL);
+	ft_bzero(out, count * size);
 	return (out);
 }

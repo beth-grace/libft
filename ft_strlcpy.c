@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 16:00:02 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/14 17:47:24 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/15 15:25:19 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t destsize)
 		dst[index] = src[index];
 		index++;
 	}
-	if (index <= destsize)
+	while (index < destsize)
 	{
 		dst[index] = '\0';
 		index++;

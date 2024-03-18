@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.o>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 14:24:03 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/15 18:01:00 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/18 16:08:15 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ static char	count(const char *s, char c)
 
 	index = 0;
 	size = 1;
+	if (!*s)
+		return (0);
 	while (s[index] != '\0')
 	{
 		if (s[index] == c)
@@ -44,8 +46,12 @@ char	**ft_split(char const *s, char c)
 	size = 0;
 	string = 0;
 	dest = (char **)malloc((count(s, c) + 1) * sizeof(char *));
-	while (s[index] != '\0')
+	if (!s || !dest)
+		return (0);
+	while (s[index])
 	{
+		while (*s == c && *s)
+			s++;
 		if (s[index] != c)
 		{
 			size = 0;
@@ -59,5 +65,6 @@ char	**ft_split(char const *s, char c)
 		else
 			index++;
 		}
+	dest[index] = NULL;
 	return (dest);
 }

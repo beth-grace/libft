@@ -6,50 +6,45 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 13:29:15 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/14 17:43:04 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/18 17:16:46 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	isspace(int c)
+static int	ft_isspace(int c)
 {
-	if (c == '\t')
+	if ((c >= 9 && c <= 13) || c == ' ')
 		return (1);
-	else if (c == '\n')
-		return (1);
-	else if (c == '\v')
-		return (1);
-	else if (c == '\f')
-		return (1);
-	else if (c == '\r')
-		return (1);
-	else if (c == ' ')
-		return (1);
-	else
-		return (0);
+	return (0);
 }
 
 int	ft_atoi(const char *str)
 {
 	size_t	index;
-	int		n;
+	int		neg;
 	int		out;
 
 	index = 0;
-	n = 0;
-	while (isspace(str[index]))
+	neg = 1;
+	while (ft_isspace(str[index]))
 		index++;
-	if (str[index] == 42)
-		n = n + 1;
-	if (str[index] == 45)
-		n = n -1;
-	index++;
-	while (str[index] >= '0' && str[index] <= '9')
+	if (str[index] == '+')
+		index++;
+	else if (str[index] == '-')
 	{
-		out *= 10;
-		out = str[index] - 48;
+		neg -= 2;
 		index++;
 	}
-	return (out * n);
+	if (str[index] >= '0' && str[index] <= '9')
+	{
+		out = str[index] - '0';
+		index++;
+	}
+	while (str[index] >= '0' && str[index] <= '9')
+	{
+		out = str[index] - '0' + (out * 10);
+		index++;
+	}
+	return (out * neg);
 }

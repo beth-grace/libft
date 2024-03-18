@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 19:18:04 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/15 15:49:31 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/18 16:01:39 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,13 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	indexh = 0;
 	indexn = 0;
 	size = ft_strlen(needle);
-	if (!size)
+	if (!needle || !haystack)
+		return (NULL);
+	if (needle[indexn] == '\0')
 		return ((char *)haystack);
-	while (haystack[indexh] != '\0' && indexh < len)
+	while (haystack[indexh] != '\0' && needle[indexn] != '\0' && indexh < len)
 	{
+		indexn = 0;
 		while (haystack[indexh] != needle[indexn])
 			indexh++;
 		if (haystack[indexh] == needle[indexn])
@@ -34,8 +37,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 					indexh++;
 					indexn++;
 				}
-				if (indexn == size)
-				return ((char *)haystack + (indexn - size));
+				if (indexn == size - 1)
+				return ((char *)haystack + indexh);
 			}
 	}
 	return (NULL);

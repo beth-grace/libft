@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 16:22:59 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/14 17:34:32 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/18 18:45:03 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,21 +36,27 @@ char	*ft_itoa(int n)
 {
 	int		index;
 	char	*dest;
+	int		neg;
 
 	if (n == 0)
 		return (ft_strdup("0"));
 	if (n == INT_MIN)
 		return (ft_strdup("-2147483648"));
 	index = count(n);
+	neg = (n < 0);
+	if (neg)
+		n = -n;
 	dest = (char *)malloc((index + 1) * sizeof(char));
+	if (!dest)
+		return (NULL);
 	dest[index--] = '\0';
 	while (n != 0)
 	{
 		dest[index--] = (n % 10) + '0';
 		n /= 10;
 	}
-	if (index == 0)
-		dest[index] = '-';
+	if (neg)
+		dest[0] = '-';
 	return (dest);
 }
 

@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.o>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 11:52:25 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/18 17:47:11 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/18 17:48:57 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		return (NULL);
 	while (index < n)
 	{
-		if (out[index] == c)
+		if (out[index] == (unsigned char)c)
 			return (out + index);
 		index++;
 	}

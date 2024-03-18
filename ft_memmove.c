@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 12:18:12 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/15 15:18:32 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/18 18:21:53 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,17 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t			index;
+	unsigned char	*pdst;
+	unsigned char	*psrc;
 
-	index = 0;
-	while (index < len)
+	if (src > dst)
+		return (ft_memcpy(dst, src, len));
+	pdst = (unsigned char *)dst;
+	psrc = (unsigned char *)src;
+	while (len > 0)
 	{
-		((unsigned char *)dst)[index] = ((unsigned char *)src)[index];
-		index++;
+		len--;
+		pdst[len] = psrc[len];
 	}
 	return (dst);
 }

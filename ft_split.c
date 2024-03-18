@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.o>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 14:24:03 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/18 16:08:15 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/18 18:36:48 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ char	**ft_split(char const *s, char c)
 		}
 		else
 			index++;
-		}
+	}
 	dest[index] = NULL;
 	return (dest);
 }

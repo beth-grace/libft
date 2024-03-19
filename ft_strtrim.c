@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.o>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 15:59:37 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/19 11:48:02 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/19 14:53:45 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	start = 0;
 	while (s1)
 	{
-		if(loop(s1[start], set))
+		if (loop(s1[start], set))
 			start++;
 		else
 			break ;

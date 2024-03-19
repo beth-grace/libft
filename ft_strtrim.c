@@ -6,7 +6,7 @@
 /*   By: bmilford <bmilford@student.42adel.o>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 15:59:37 by bmilford          #+#    #+#             */
-/*   Updated: 2024/03/14 17:48:03 by bmilford         ###   ########.fr       */
+/*   Updated: 2024/03/19 11:48:02 by bmilford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,27 +28,26 @@ static int	loop(char const c, char const *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		out;
 	int		start;
 	int		end;
 	char	*dest;
 
 	start = 0;
-	while (loop(s1[start], set))
-		start++;
-	end = ft_strlen(s1);
-	while (loop(s1[end], set))
-		end--;
-	dest = (char *)malloc((end - start + 1) * sizeof(char));
-	if (!dest)
-		return (NULL);
-	out = 0;
-	while (s1[start] != '\0')
+	while (s1)
 	{
-		dest[out] = s1[start];
-		start++;
-		out++;
+		if(loop(s1[start], set))
+			start++;
+		else
+			break ;
 	}
-	dest[out] = '\0';
+	end = ft_strlen(s1) - 1;
+	while (s1)
+	{
+		if (loop(s1[end], set))
+			end--;
+		else
+			break ;
+	}
+	dest = ft_substr(s1, start, end - start + 1);
 	return (dest);
 }

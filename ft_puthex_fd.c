@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_puthex_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bmilford <bmilford@student.42adel.org.au>  +#+  +:+       +#+        */
+/*   By: bmilford <bmilford@student.42adel.o>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/08 12:05:31 by bmilford          #+#    #+#             */
-/*   Updated: 2024/04/24 14:21:29 by bmilford         ###   ########.fr       */
+/*   Created: 2024/04/22 17:24:29 by bmilford          #+#    #+#             */
+/*   Updated: 2024/06/19 19:19:12 by beefie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putstr_fd(char *s, int fd)
+int	ft_puthex_fd(unsigned long n, char *pls, int fd)
 {
-	int	index;
+	int				t;
+	unsigned int	base;
 
-	if (!s)
-		return (write(fd, "(null)", 6));
-	index = 0;
-	while (s[index] != '\0')
-		index++;
-	return (write(fd, s, index));
+	t = 0;
+	base = ft_strlen(pls);
+	if (n < base)
+	{
+		write(fd, pls + n, 1);
+		return (1);
+	}
+	t = ft_puthex_fd(n / base, pls, fd);
+	write(fd, pls + (n % base), 1);
+	t++;
+	return (t);
 }
